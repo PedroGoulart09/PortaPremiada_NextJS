@@ -1,0 +1,13 @@
+.porta {
+    display: flex;
+    flex-direction: column;
+    width: var(--area-porta-largura);
+    height: var(--area-porta-altura);
+    background-color: chocolate;
+    padding: 15px;
+    align-items: center;
+}
+
+.numero {
+   font-size: 3rem;
+}
