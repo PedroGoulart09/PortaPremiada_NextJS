@@ -1,9 +1,9 @@
 import PortaModel from "../model/portaModel";
 
-export  function criarPortas(qtde: number, selecionada:number):PortaModel[]{
+export  function criarPortas(qtde: number, portaComPresente:number):PortaModel[]{
     return Array.from({length: qtde}, (_, i) => {
         const numero = i + 1
-        const temPresente = numero === selecionada
+        const temPresente = numero === portaComPresente
         return new PortaModel(numero, temPresente)
     } )
 }
@@ -18,6 +18,4 @@ export function attPortas(portas: PortaModel[], portaModificada: PortaModel):Por
             portaAtual : portaAtual.desselecionar()
         }
     })
-   
-
 }
