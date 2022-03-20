@@ -1,14 +1,26 @@
+
 import { useState } from "react";
 import Porta from "../components/Porta";
+import {criarPortas, attPortas} from "../functions/porta";
 import PortaModel from "../model/portaModel";
 
 export default function Home() {
 
-  const [p1, setP1] = useState(new PortaModel(1))
+  const [portas, setPortas] = useState(criarPortas(3,2))
+
+  function renderPorta(){
+    return portas.map(porta => {
+      return <Porta 
+      key={porta.numero}
+       value={porta} 
+       onChange={ news => setPortas(attPortas(portas, news))}/>
+
+    })
+  }
 
   return (
     <div style={{ display: 'flex' }}>
-      <Porta value={p1} onChange={novaPorta => setP1(novaPorta)} />
+      {renderPorta()}
     </div>
   )
 }
