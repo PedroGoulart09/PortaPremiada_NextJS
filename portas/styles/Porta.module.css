@@ -34,6 +34,7 @@
 .estrutura {
   display: flex;
   flex-grow: 1;
+  background-color: #0005;
   border-left: 5px solid brown;
   border-top: 5px solid brown;
   border-right: 5px solid brown;
@@ -47,16 +48,15 @@
 }
 
 .selecionada {
-    border-left: 5px solid yellow;
-    border-top: 5px solid yellow;
-    border-right: 5px solid yellow;
+  border-left: 5px solid yellow;
+  border-top: 5px solid yellow;
+  border-right: 5px solid yellow;
 }
 
 .selecionada .numero {
-    color: yellow;
+  color: yellow;
 }
 
 .selecionada .macaneta {
-    background-color: yellow;
+  background-color: yellow;
 }
-
